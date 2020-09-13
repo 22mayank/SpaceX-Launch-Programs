@@ -1,0 +1,169 @@
+.app-container{
+    overflow: auto;
+    max-height: calc(100vh - 100px);
+}
+
+.card-img-top {
+  width: 100% !important;
+}
+
+.card {
+  /* max-width: 80%; */
+  padding: 1rem;
+}
+
+.card-row{
+  margin: 0px !important;
+}
+
+.card-title {
+  color: #217df3;
+  font-weight: 600;
+  margin-top: 0.625rem;
+}
+
+.card-text-value {
+  color: #217df3;
+  margin-left: 5px;
+}
+
+.card-block p {
+  margin-bottom: 5px;
+}
+
+.img-div {
+  background-color: #dcdcdc;
+  width: 58%;
+  text-align: center;
+  margin: 0rem auto;
+}
+
+.dataLake-panel-container {
+  max-height: calc(100vh - 100px);
+  overflow: auto;
+  padding: 0rem !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.card-base {
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.card-text-label {
+  font-weight: 600;
+}
+
+@media  screen and (min-width: 701px) and (max-width: 1024px) {
+  .card-base {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    width: 100%;
+  }
+}
+
+@media  screen and (max-width: 700px) {
+  .card-base {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+  }
+}
+
+@media  screen and (min-width: 1025px){
+  .card-base {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    position: relative;
+    width: 100%;
+  }
+}
+
+.filterCard {
+  padding: 0rem !important;
+}
+
+.filterCard-body {
+  padding: 0.625rem !important;
+}
+
+.filter-title {
+  margin: 0rem 0rem 0.625rem !important;
+  color: black;
+  font-size: 1rem;
+}
+
+.launchDivider {
+  border-top: 2px solid;
+  margin: 0px 25%;
+  opacity: 0.2;
+}
+
+.card-subtitle {
+  text-align: center;
+  margin-bottom: 0rem !important;
+  color: black !important;
+}
+
+.yearToolbar {
+  margin: 0.625rem 0rem !important;
+  justify-content: space-around !important;
+}
+
+.yearBtn {
+  padding: 0.175rem 0.75rem !important;
+  font-size: 0.825rem !important;
+  color: black !important;
+  background-color: #b1db9a !important;
+  border-color: #b1db9a !important;
+}
+
+.buttonHide{
+  visibility: hidden;
+}
+
+.yearBtn:focus {
+  background-color: #218838 !important;
+  border-color: #1e7e34 !important;
+}
+
+/* .yearToolbarLast {
+  justify-content: flex-start !important;
+  margin-left: 15% !important;
+} */
+
+.successFilter {
+  margin-top: 1.5rem;
+}
+
+.filterHeading {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.resetButton:hover, .resetButton:focus {
+  text-decoration: none !important;
+}
+
+.resetButton {
+  margin: 0rem 0rem 0.625rem !important;
+  padding: 0rem !important;
+}

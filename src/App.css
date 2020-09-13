@@ -1,0 +1,75 @@
+.App{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  
+
+  --primary-color: #217DF3;
+
+  --background-light-primary: #eeeeee;
+  --background-dark-secondary: #F7F7F7;
+  --background-light-content:#ffffff;
+  --background-dark-header:#202B31;
+  --background-light-green:#dcdcdc;
+
+  --border-light-grey:#E1E1E1;
+  --border-dark-grey: rgba(0,0,0,0.25);
+
+  --color-black-54:rgba(0,0,0,0.54);
+  --color-black-87:rgba(0,0,0,0.87);
+   --color-black-100:#000000;
+   --error-color: #f44336;
+
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.2px;
+  -webkit-font-smoothing: antialiased;
+
+  background-color: var(--background-light-green);
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Toastify__toast {
+  margin-bottom: 0.5rem !important;
+  min-height: 50px !important;
+  width: 325px;
+}
+
+.Toastify__toast--info {
+  background-color: #0091ff !important;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

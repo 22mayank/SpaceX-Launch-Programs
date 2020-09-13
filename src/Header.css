@@ -1,0 +1,16 @@
+.navbar-brand {
+    font-family: "Roboto", sans-serif;
+    color: black !important;
+    font-size: 21px !important;
+    font-weight: 600 !important;
+  }
+  
+  .navbar{
+      padding: 12px 0px 0px 20px;
+      background: transparent !important;
+  }
+  
+  .header{
+      min-height: 45px;
+  }
+  
