@@ -51,6 +51,6 @@ node server.js
 4. Open the index.html file using modern web browser or launch using live server in VSCode.
 
 # App Performance
-![Desktop App Performance](https://github.com/22mayank/SpaceX-program/blob/master/spacex-program/src/images/Desktop-Analysis.png)
-![Mobile App Performance](https://github.com/22mayank/SpaceX-program/blob/master/spacex-program/src/images/Mobile-Analysis.png)
-![Desktop App Performance](https://github.com/22mayank/SpaceX-program/blob/master/spacex-program/src/images/SpaceX.png)
+![Desktop App Performance](https://github.com/22mayank/SpaceX-Launch-Programs/blob/master/src/images/Desktop-Analysis.png)
+![Mobile App Performance](https://github.com/22mayank/SpaceX-Launch-Programs/blob/master/src/images/Mobile-Analysis.png)
+![Desktop App Performance](https://github.com/22mayank/SpaceX-Launch-Programs/blob/master/src/images/SpaceX.png)
