@@ -121,14 +121,14 @@
 
 @media screen and (min-width: 1024px) {
   .card-row {
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4,calc(25% - 7.5px));
     grid-gap: 10px;
   }
 }
 
 @media screen and (min-width: 701px) and (max-width: 1023px) {
   .card-row {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, calc(50% - 5px));
     grid-gap: 10px;
   }
 }
@@ -204,6 +204,15 @@
   padding: 0rem !important;
 }
 
-.yearBtn.clicked{
+.active{
   background-color: #7cba01 !important;
+  padding: 0.175rem 0.75rem !important;
+  font-size: 0.825rem !important;
+  color: black !important;
+  border-radius: .25rem;
+  border: #7cba01 !important;
+}
+
+.active:focus{
+  outline: none !important;
 }

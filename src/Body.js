@@ -10,6 +10,9 @@ class Body extends Component {
       yearFilter: "",
       launchFilter: "",
       landFilter: "",
+      selectedYearButton: "",
+      selectedLaunchButton: "",
+      selectedLandButton: "",
     };
   }
 
@@ -30,7 +33,11 @@ class Body extends Component {
         result.push(<br key={"br-row-" + element} />);
       });
     } else {
-      result.push(<span className="card-text-value" key="1">{"NA"}</span>);
+      result.push(
+        <span className="card-text-value" key="1">
+          {"NA"}
+        </span>
+      );
     }
 
     return result;
@@ -40,40 +47,49 @@ class Body extends Component {
     let launchFilter = "";
     if (eve.target.value !== null || eve.target.value !== undefined) {
       launchFilter = eve.target.value;
-      eve.target.classList.contains("clicked")
-        ? eve.target.classList.remove("clicked")
-        : eve.target.classList.add("clicked");
     }
 
-    this.setState({ launchFilter: launchFilter }, () => {
-      this.getFilteredData();
-    });
+    this.setState(
+      {
+        launchFilter: launchFilter,
+        selectedLaunchButton: launchFilter,
+      },
+      () => {
+        this.getFilteredData();
+      }
+    );
   };
 
   setLand = (eve) => {
     let landFilter = "";
     if (eve.target.value !== null || eve.target.value !== undefined) {
       landFilter = eve.target.value;
-      eve.target.classList.contains("clicked")
-        ? eve.target.classList.remove("clicked")
-        : eve.target.classList.add("clicked");
     }
-    this.setState({ landFilter: landFilter }, () => {
-      this.getFilteredData();
-    });
+    this.setState(
+      {
+        landFilter: landFilter,
+        selectedLandButton: landFilter,
+      },
+      () => {
+        this.getFilteredData();
+      }
+    );
   };
 
   setYear = (eve) => {
     let yearFilter = "";
     if (eve.target.value !== null || eve.target.value !== undefined) {
       yearFilter = eve.target.value;
-      eve.target.classList.contains("clicked")
-        ? eve.target.classList.remove("clicked")
-        : eve.target.classList.add("clicked");
     }
-    this.setState({ yearFilter: yearFilter }, () => {
-      this.getFilteredData();
-    });
+    this.setState(
+      {
+        yearFilter: yearFilter,
+        selectedYearButton: yearFilter,
+      },
+      () => {
+        this.getFilteredData();
+      }
+    );
   };
 
   getFilteredData = async () => {
@@ -115,6 +131,9 @@ class Body extends Component {
         launchFilter: "",
         landFilter: "",
         yearFilter: "",
+        selectedYearButton: "",
+        selectedLaunchButton: "",
+        selectedLandButton: "",
       },
       () => {
         this.getFilteredData();
@@ -165,7 +184,11 @@ class Body extends Component {
                     >
                       <button
                         type="button"
-                        className="yearBtn btn btn-success"
+                        className={
+                          "2006" === this.state.selectedYearButton
+                            ? "active"
+                            : "yearBtn btn btn-success"
+                        }
                         value="2006"
                         onClick={(e) => {
                           this.setYear(e);
@@ -181,7 +204,11 @@ class Body extends Component {
                     >
                       <button
                         type="button"
-                        className="yearBtn btn btn-success"
+                        className={
+                          "2007" === this.state.selectedYearButton
+                            ? "active"
+                            : "yearBtn btn btn-success"
+                        }
                         value="2007"
                         onClick={(e) => {
                           this.setYear(e);
@@ -203,7 +230,11 @@ class Body extends Component {
                     >
                       <button
                         type="button"
-                        className="yearBtn btn btn-success"
+                        className={
+                          "2008" === this.state.selectedYearButton
+                            ? "active"
+                            : "yearBtn btn btn-success"
+                        }
                         value="2008"
                         onClick={(e) => {
                           this.setYear(e);
@@ -219,7 +250,11 @@ class Body extends Component {
                     >
                       <button
                         type="button"
-                        className="yearBtn btn btn-success"
+                        className={
+                          "2009" === this.state.selectedYearButton
+                            ? "active"
+                            : "yearBtn btn btn-success"
+                        }
                         value="2009"
                         onClick={(e) => {
                           this.setYear(e);
@@ -241,7 +276,11 @@ class Body extends Component {
                     >
                       <button
                         type="button"
-                        className="yearBtn btn btn-success"
+                        className={
+                          "2010" === this.state.selectedYearButton
+                            ? "active"
+                            : "yearBtn btn btn-success"
+                        }
                         value="2010"
                         onClick={(e) => {
                           this.setYear(e);
@@ -257,7 +296,11 @@ class Body extends Component {
                     >
                       <button
                         type="button"
-                        className="yearBtn btn btn-success"
+                        className={
+                          "2011" === this.state.selectedYearButton
+                            ? "active"
+                            : "yearBtn btn btn-success"
+                        }
                         value="2011"
                         onClick={(e) => {
                           this.setYear(e);
@@ -279,7 +322,11 @@ class Body extends Component {
                     >
                       <button
                         type="button"
-                        className="yearBtn btn btn-success"
+                        className={
+                          "2012" === this.state.selectedYearButton
+                            ? "active"
+                            : "yearBtn btn btn-success"
+                        }
                         value="2012"
                         onClick={(e) => {
                           this.setYear(e);
@@ -295,7 +342,11 @@ class Body extends Component {
                     >
                       <button
                         type="button"
-                        className="yearBtn btn btn-success"
+                        className={
+                          "2013" === this.state.selectedYearButton
+                            ? "active"
+                            : "yearBtn btn btn-success"
+                        }
                         value="2013"
                         onClick={(e) => {
                           this.setYear(e);
@@ -317,7 +368,11 @@ class Body extends Component {
                     >
                       <button
                         type="button"
-                        className="yearBtn btn btn-success"
+                        className={
+                          "2014" === this.state.selectedYearButton
+                            ? "active"
+                            : "yearBtn btn btn-success"
+                        }
                         value="2014"
                         onClick={(e) => {
                           this.setYear(e);
@@ -333,7 +388,11 @@ class Body extends Component {
                     >
                       <button
                         type="button"
-                        className="yearBtn btn btn-success"
+                        className={
+                          "2015" === this.state.selectedYearButton
+                            ? "active"
+                            : "yearBtn btn btn-success"
+                        }
                         value="2015"
                         onClick={(e) => {
                           this.setYear(e);
@@ -355,7 +414,11 @@ class Body extends Component {
                     >
                       <button
                         type="button"
-                        className="yearBtn btn btn-success"
+                        className={
+                          "2016" === this.state.selectedYearButton
+                            ? "active"
+                            : "yearBtn btn btn-success"
+                        }
                         value="2016"
                         onClick={(e) => {
                           this.setYear(e);
@@ -371,7 +434,11 @@ class Body extends Component {
                     >
                       <button
                         type="button"
-                        className="yearBtn btn btn-success"
+                        className={
+                          "2017" === this.state.selectedYearButton
+                            ? "active"
+                            : "yearBtn btn btn-success"
+                        }
                         value="2017"
                         onClick={(e) => {
                           this.setYear(e);
@@ -393,7 +460,11 @@ class Body extends Component {
                     >
                       <button
                         type="button"
-                        className="yearBtn btn btn-success"
+                        className={
+                          "2018" === this.state.selectedYearButton
+                            ? "active"
+                            : "yearBtn btn btn-success"
+                        }
                         value="2018"
                         onClick={(e) => {
                           this.setYear(e);
@@ -409,7 +480,11 @@ class Body extends Component {
                     >
                       <button
                         type="button"
-                        className="yearBtn btn btn-success"
+                        className={
+                          "2019" === this.state.selectedYearButton
+                            ? "active"
+                            : "yearBtn btn btn-success"
+                        }
                         value="2019"
                         onClick={(e) => {
                           this.setYear(e);
@@ -431,7 +506,11 @@ class Body extends Component {
                     >
                       <button
                         type="button"
-                        className="yearBtn btn btn-success"
+                        className={
+                          "2020" === this.state.selectedYearButton
+                            ? "active"
+                            : "yearBtn btn btn-success"
+                        }
                         value="2020"
                         onClick={(e) => {
                           this.setYear(e);
@@ -472,7 +551,11 @@ class Body extends Component {
                       >
                         <button
                           type="button"
-                          className="yearBtn btn btn-success"
+                          className={
+                            "true" === this.state.selectedLaunchButton
+                              ? "active"
+                              : "yearBtn btn btn-success"
+                          }
                           value="true"
                           onClick={(e) => {
                             this.setLaunch(e);
@@ -488,7 +571,11 @@ class Body extends Component {
                       >
                         <button
                           type="button"
-                          className="yearBtn btn btn-success"
+                          className={
+                            "false" === this.state.selectedLaunchButton
+                              ? "active"
+                              : "yearBtn btn btn-success"
+                          }
                           value="false"
                           onClick={(e) => {
                             this.setLaunch(e);
@@ -514,7 +601,11 @@ class Body extends Component {
                       >
                         <button
                           type="button"
-                          className="yearBtn btn btn-success"
+                          className={
+                            "true" === this.state.selectedLandButton
+                              ? "active"
+                              : "yearBtn btn btn-success"
+                          }
                           value="true"
                           onClick={(e) => {
                             this.setLand(e);
@@ -530,7 +621,11 @@ class Body extends Component {
                       >
                         <button
                           type="button"
-                          className="yearBtn btn btn-success"
+                          className={
+                            "false" === this.state.selectedLandButton
+                              ? "active"
+                              : "yearBtn btn btn-success"
+                          }
                           value="false"
                           onClick={(e) => {
                             this.setLand(e);
@@ -564,7 +659,7 @@ class Body extends Component {
             <React.Fragment>
               <div class="container-fluid">
                 <div className="card-row row">
-                  {programList.length > 0 ?
+                  {programList.length > 0 ? (
                     programList.map((row, index) => {
                       return (
                         <div className="card-base" key={index}>
@@ -608,20 +703,23 @@ class Body extends Component {
                                   Successful Landing:
                                 </span>
                                 <span className="card-text-value">
-                                  {row.rocket &&
+                                  {(row.rocket &&
                                     row.rocket.first_stage !== null &&
                                     row.rocket.first_stage.cores[0] !== null &&
                                     row.rocket.first_stage.cores[0]
                                       .land_success !== null &&
-                                    row.rocket.first_stage.cores[0].land_success.toString() || '-'}
+                                    row.rocket.first_stage.cores[0].land_success.toString()) ||
+                                    "-"}
                                 </span>
                               </p>
                             </div>
                           </div>
                         </div>
                       );
-                    }) :
-                    <div>No Records for the selected filter(s).</div>}
+                    })
+                  ) : (
+                    <div>No Records for the selected filter(s).</div>
+                  )}
                 </div>
               </div>
             </React.Fragment>
