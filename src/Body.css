@@ -130,6 +130,10 @@
     font-size: 0.825rem !important;
     font-weight: 500 !important;
   }
+  .active{
+    font-size: 0.825rem !important;
+    font-weight: 500 !important;
+  }
 }
 
 @media screen and (min-width: 701px) and (max-width: 1023px) {
@@ -163,6 +167,10 @@
   }
   .cards-container{
     padding: 0px !important;
+  }
+  .active{
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
   }
   
 }
@@ -242,7 +250,7 @@
 .active {
   background-color: #7cba01 !important;
   padding: 0.175rem 0.75rem !important;
-  font-size: 0.825rem !important;
+  font-size: 0.825re;
   color: black;
   border-radius: 0.25rem;
   border: #7cba01 !important;
