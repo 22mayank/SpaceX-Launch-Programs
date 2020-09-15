@@ -152,9 +152,9 @@ class Body extends Component {
 
     return (
       <div className="app-container container-fluid">
-        <div class="row">
+        <div className="row">
           <div className="filter col-md-6 col-lg-3">
-            <div class="container-fluid">
+            <div className="container-fluid">
               <div className="filterCard card">
                 <div className="filterCard-body card-body">
                   <div className="filterHeading">
@@ -663,7 +663,7 @@ class Body extends Component {
           </div>
           <section className="col-md-6 col-lg-9">
             <React.Fragment>
-              <div class="container-fluid">
+              <div className="container-fluid">
                 <div className="card-row row">
                   {programList.length > 0 ? (
                     programList.map((row, index) => {

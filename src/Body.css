@@ -18,13 +18,13 @@
 }
 
 .card-title {
-  color: #217df3;
+  color: var(--primary-color);
   font-weight: 600;
   margin-top: 0.625rem;
 }
 
 .card-text-value {
-  color: #217df3;
+  color: var(--primary-color);
   margin-left: 5px;
 }
 
