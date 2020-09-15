@@ -37,21 +37,40 @@ class Body extends Component {
   };
 
   setLaunch = (eve) => {
-    let launchFilter = eve.target.value;
+    let launchFilter = "";
+    if (eve.target.value !== null || eve.target.value !== undefined) {
+      launchFilter = eve.target.value;
+      eve.target.classList.contains("clicked")
+        ? eve.target.classList.remove("clicked")
+        : eve.target.classList.add("clicked");
+    }
+
     this.setState({ launchFilter: launchFilter }, () => {
       this.getFilteredData();
     });
   };
 
   setLand = (eve) => {
-    let landFilter = eve.target.value;
+    let landFilter = "";
+    if (eve.target.value !== null || eve.target.value !== undefined) {
+      landFilter = eve.target.value;
+      eve.target.classList.contains("clicked")
+        ? eve.target.classList.remove("clicked")
+        : eve.target.classList.add("clicked");
+    }
     this.setState({ landFilter: landFilter }, () => {
       this.getFilteredData();
     });
   };
 
   setYear = (eve) => {
-    let yearFilter = eve.target.value;
+    let yearFilter = "";
+    if (eve.target.value !== null || eve.target.value !== undefined) {
+      yearFilter = eve.target.value;
+      eve.target.classList.contains("clicked")
+        ? eve.target.classList.remove("clicked")
+        : eve.target.classList.add("clicked");
+    }
     this.setState({ yearFilter: yearFilter }, () => {
       this.getFilteredData();
     });
@@ -109,7 +128,7 @@ class Body extends Component {
     return (
       <div className="app-container container-fluid">
         <div class="row">
-          <div className="filter col-lg-3">
+          <div className="filter col-md-6 col-lg-3">
             <div class="container-fluid">
               <div className="filterCard card">
                 <div className="filterCard-body card-body">
@@ -541,11 +560,11 @@ class Body extends Component {
               </div>
             </div>
           </div>
-          <section className="col-lg-9">
+          <section className="card-container col-md-6 col-lg-9">
             <React.Fragment>
               <div class="container-fluid">
                 <div className="card-row row">
-                  {programList.length > 0 &&
+                  {programList.length > 0 ?
                     programList.map((row, index) => {
                       return (
                         <div className="card-base" key={index}>
@@ -589,15 +608,20 @@ class Body extends Component {
                                   Successful Landing:
                                 </span>
                                 <span className="card-text-value">
-                                  {row.launch_landing &&
-                                    row.launch_landing.toString()}
+                                  {row.rocket &&
+                                    row.rocket.first_stage !== null &&
+                                    row.rocket.first_stage.cores[0] !== null &&
+                                    row.rocket.first_stage.cores[0]
+                                      .land_success !== null &&
+                                    row.rocket.first_stage.cores[0].land_success.toString() || '-'}
                                 </span>
                               </p>
                             </div>
                           </div>
                         </div>
                       );
-                    })}
+                    }) :
+                    <div>No Records for the selected filter(s).</div>}
                 </div>
               </div>
             </React.Fragment>

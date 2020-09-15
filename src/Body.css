@@ -58,17 +58,26 @@
   background: transparent;
 }
 
-.card-base {
+.card-row {
   padding-left: 0.5rem;
   padding-bottom: 0.5rem;
+  display: grid !important;
+  grid-gap: 25px;
 }
 
 .card-text-label {
   font-weight: 600;
 }
 
-@media  screen and (min-width: 701px) and (max-width: 1024px) {
-  .card-base {
+@media  screen and (min-width: 701px) and (max-width: 1023px) {
+  .card-container {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    width: 100%;
+  }
+  .filter {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
@@ -78,7 +87,14 @@
 }
 
 @media  screen and (max-width: 700px) {
-  .card-base {
+  .card-container {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+  }
+  .filter {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
@@ -87,8 +103,15 @@
   }
 }
 
-@media  screen and (min-width: 1025px){
-  .card-base {
+@media  screen and (min-width: 1024px){
+  .card-container {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    position: relative;
+    width: 100%;
+  }
+  .filter {
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
     max-width: 25%;
@@ -96,6 +119,21 @@
     width: 100%;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .card-row {
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1023px) {
+  .card-row {
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 10px;
+  }
+}
+
 
 .filterCard {
   padding: 0rem !important;
@@ -141,8 +179,7 @@
 }
 
 .yearBtn:focus {
-  background-color: #218838 !important;
-  border-color: #1e7e34 !important;
+  box-shadow: none !important;
 }
 
 /* .yearToolbarLast {
@@ -166,4 +203,8 @@
 .resetButton {
   margin: 0rem 0rem 0.625rem !important;
   padding: 0rem !important;
+}
+
+.clicked{
+  background-color: #7cba01 !important;
 }
