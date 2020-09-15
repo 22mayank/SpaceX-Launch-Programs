@@ -655,7 +655,7 @@ class Body extends Component {
               </div>
             </div>
           </div>
-          <section className="card-container col-md-6 col-lg-9">
+          <section className="col-md-6 col-lg-9">
             <React.Fragment>
               <div class="container-fluid">
                 <div className="card-row row">
