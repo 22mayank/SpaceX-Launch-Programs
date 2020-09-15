@@ -1,6 +1,6 @@
-.app-container{
-    overflow: auto;
-    max-height: calc(100vh - 100px);
+.app-container {
+  overflow: auto;
+  max-height: calc(100vh - 100px);
 }
 
 .card-img-top {
@@ -13,7 +13,7 @@
   padding: 1rem;
 }
 
-.card-row{
+.card-row {
   margin: 0px !important;
 }
 
@@ -70,7 +70,7 @@
   font-weight: 600;
 }
 
-@media  screen and (min-width: 701px) and (max-width: 1023px) {
+@media screen and (min-width: 701px) and (max-width: 1023px) {
   .col-lg-9 {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
@@ -87,7 +87,7 @@
   }
 }
 
-@media  screen and (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .col-lg-9 {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
@@ -104,7 +104,7 @@
   }
 }
 
-@media  screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
   .col-lg-9 {
     -ms-flex: 0 0 75%;
     flex: 0 0 75%;
@@ -123,8 +123,12 @@
 
 @media screen and (min-width: 1024px) {
   .card-row {
-    grid-template-columns: repeat(4,calc(25% - 7.5px));
+    grid-template-columns: repeat(4, calc(25% - 7.5px));
     grid-gap: 10px;
+  }
+  .yearBtn {
+    font-size: 0.825rem !important;
+    font-weight: 500 !important;
   }
 }
 
@@ -133,6 +137,34 @@
     grid-template-columns: repeat(2, calc(50% - 5px));
     grid-gap: 10px;
   }
+  .card-text-value {
+    font-size: 18px;
+  }
+  .card-text-label {
+    font-size: 18px;
+  }
+  .card-title {
+    font-size: 18px;
+  }
+  .filter {
+    border-radius: 8px;
+    padding: 0px !important;
+    align-self: start;
+  }
+  .filterHeading {
+    grid-template-columns: 40% 60% !important;
+  }
+  .card-subtitle {
+    font-size: 18px;
+  }
+  .yearBtn {
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
+  }
+  .cards-container{
+    padding: 0px !important;
+  }
+  
 }
 
 
@@ -145,7 +177,7 @@
 }
 
 .filter-title {
-  margin: 0rem 0rem 0.625rem !important;
+  margin: 0rem 0rem 0.625rem;
   color: black;
   font-size: 1rem;
 }
@@ -169,13 +201,13 @@
 
 .yearBtn {
   padding: 0.175rem 0.75rem !important;
-  font-size: 0.825rem !important;
+  font-size: 0.825rem;
   color: black !important;
   background-color: #b1db9a !important;
   border-color: #b1db9a !important;
 }
 
-.buttonHide{
+.buttonHide {
   visibility: hidden;
 }
 
@@ -194,27 +226,28 @@
 
 .filterHeading {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 40% 60%;
 }
 
-.resetButton:hover, .resetButton:focus {
+.resetButton:hover,
+.resetButton:focus {
   text-decoration: none !important;
 }
 
 .resetButton {
-  margin: 0rem 0rem 0.625rem !important;
+  margin: 0rem 0rem 0.625rem;
   padding: 0rem !important;
 }
 
-.active{
+.active {
   background-color: #7cba01 !important;
   padding: 0.175rem 0.75rem !important;
   font-size: 0.825rem !important;
-  color: black !important;
-  border-radius: .25rem;
+  color: black;
+  border-radius: 0.25rem;
   border: #7cba01 !important;
 }
 
-.active:focus{
+.active:focus {
   outline: none !important;
 }

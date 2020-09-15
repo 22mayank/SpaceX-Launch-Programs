@@ -152,8 +152,8 @@ class Body extends Component {
 
     return (
       <div className="app-container container-fluid">
-        <div className="row">
-          <div className="filter col-md-6 col-lg-3">
+        <div className="app-container-row row">
+          <div className="filter col-md-4 col-lg-3">
             <div className="container-fluid">
               <div className="filterCard card">
                 <div className="filterCard-body card-body">
@@ -661,7 +661,7 @@ class Body extends Component {
               </div>
             </div>
           </div>
-          <section className="col-md-6 col-lg-9">
+          <section className="cards-container col-md-8 col-lg-9">
             <React.Fragment>
               <div className="container-fluid">
                 <div className="card-row row">
