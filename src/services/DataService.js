@@ -16,7 +16,6 @@ class DataService extends BaseService {
 
   static async getProgramList() {
     var response = await this.axios.get("/launches?limit=100");
-    console.log(response);
     return response.status === 200 ? response.data : [];
   }
 
