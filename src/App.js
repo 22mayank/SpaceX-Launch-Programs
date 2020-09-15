@@ -5,11 +5,11 @@ import Body from "./Body.js";
 import Footer from "./Footer.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <Header />
-      <Body />
+      <Body history={props.history}/>
       <Footer />
     </div>
   );

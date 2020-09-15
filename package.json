@@ -20,6 +20,7 @@
     "react-toastify": "^4.3.2",
     "react-tooltip": "^3.10.0",
     "typeface-roboto": "^0.0.75",
+    "react-router-dom": "^5.2.0",
     "typeface-roboto-condensed": "^0.0.75",
     "typeface-roboto-mono": "^0.0.75"
   },

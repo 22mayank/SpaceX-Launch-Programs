@@ -101,6 +101,7 @@ class Body extends Component {
     ) {
       let launchData = await DataService.getLaunchList(launchFilter);
       this.setState({ programList: launchData });
+      this.props.history.push(`?launch_success=${launchFilter}`);
     } else if (
       (launchFilter !== "" || launchFilter !== undefined) &&
       (landFilter !== "" || landFilter !== undefined) &&
@@ -108,6 +109,7 @@ class Body extends Component {
     ) {
       let landData = await DataService.getLandList(launchFilter, landFilter);
       this.setState({ programList: landData });
+      this.props.history.push(`?launch_success=${launchFilter}&land_success=${landFilter}`);
     } else if (
       (launchFilter !== "" || launchFilter !== undefined) &&
       (landFilter !== "" || landFilter !== undefined) &&
@@ -119,7 +121,9 @@ class Body extends Component {
         yearFilter
       );
       this.setState({ programList: allData });
+      this.props.history.push(`?launch_success=${launchFilter}&land_success=${landFilter}&launch_year=${yearFilter}`)
     } else {
+      this.props.history.push("/");
       let response = await DataService.getProgramList();
       this.setState({ programList: response });
     }
