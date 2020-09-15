@@ -30,7 +30,7 @@ class Body extends Component {
         result.push(<br key={"br-row-" + element} />);
       });
     } else {
-      result.push(<span key="1">{"-"}</span>);
+      result.push(<span className="card-text-value" key="1">{"NA"}</span>);
     }
 
     return result;

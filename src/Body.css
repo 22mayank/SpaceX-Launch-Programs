@@ -33,7 +33,6 @@
 
 .img-div {
   background-color: #dcdcdc;
-  width: 58%;
   text-align: center;
   margin: 0rem auto;
 }
@@ -205,6 +204,6 @@
   padding: 0rem !important;
 }
 
-.clicked{
+.yearBtn.clicked{
   background-color: #7cba01 !important;
 }
