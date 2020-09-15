@@ -4,7 +4,8 @@
 }
 
 .card-img-top {
-  width: 100% !important;
+  min-height: 220px;
+  height: auto;
 }
 
 .card {
@@ -35,6 +36,7 @@
   background-color: #dcdcdc;
   text-align: center;
   margin: 0rem auto;
+  min-width: 100%;
 }
 
 .dataLake-panel-container {
