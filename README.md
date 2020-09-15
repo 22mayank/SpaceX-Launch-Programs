@@ -1,6 +1,9 @@
 # SpaceX-Launch programs
 Gives a brief information on various launches done by SpaceX as part of their space exploration.
 
+# Deployed Site
+[https://spacex-launch-program.netlify.app/](https://spacex-launch-program.netlify.app/)
+
 # How does it work
 Initial render will show the launch programs done by SpaceX since 2006 till date. Result is limited to 100 programs by default.
 
@@ -51,6 +54,6 @@ node server.js
 4. Open the index.html file using modern web browser or launch using live server in VSCode.
 
 # App Performance
-![Desktop App Performance](https://github.com/22mayank/SpaceX-program/blob/master/spacex-program/src/images/Desktop-Analysis.png)
-![Mobile App Performance](https://github.com/22mayank/SpaceX-program/blob/master/spacex-program/src/images/Mobile-Analysis.png)
-![Desktop App Performance](https://github.com/22mayank/SpaceX-program/blob/master/spacex-program/src/images/SpaceX.png)
+Desktop: ![Desktop App Performance](https://github.com/22mayank/SpaceX-Launch-Programs/blob/master/src/images/Desktop-Analysis.png)
+Mobile: ![Mobile App Performance](https://github.com/22mayank/SpaceX-Launch-Programs/blob/master/src/images/Mobile-Analysis.png)
+![Desktop App Performance](https://github.com/22mayank/SpaceX-Launch-Programs/blob/master/src/images/SpaceX.png)
