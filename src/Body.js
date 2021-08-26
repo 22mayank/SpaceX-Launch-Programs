@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Body.css";
 import DataService from "./services/DataService";
+import queryString from 'query-string'
 
 class Body extends Component {
   constructor() {
@@ -17,8 +18,23 @@ class Body extends Component {
   }
 
   async componentDidMount() {
-    let response = await DataService.getProgramList();
-    this.setState({ programList: response });
+    const parsed = queryString.parse(window.location.search);
+    if (Object.keys(parsed).length > 0){
+      this.setState({
+        yearFilter: parsed.launch_year ? parsed.launch_year : null,
+        launchFilter: parsed.launch_success ? parsed.launch_success : null,
+        landFilter: parsed.land_success ? parsed.land_success : null,
+        selectedYearButton: parsed.launch_year ? parsed.launch_year : null,
+        selectedLaunchButton: parsed.launch_success ? parsed.launch_success : null,
+        selectedLandButton: parsed.land_success ? parsed.land_success : null,
+      }, () => {
+        this.getFilteredData();
+      })
+    }
+    else{
+      let response = await DataService.getProgramList();
+      this.setState({ programList: response });
+    }
   }
 
   displayNames = (missionapplicable) => {
@@ -658,6 +674,10 @@ class Body extends Component {
               <div>
                 <span className="card-text-label">Successful Land:</span>
                 <span className="card-text-value">{landFilter}</span>
+              </div>
+              <div>
+                <span className="card-text-label">Total no. of Launches:</span>
+                <span className="card-text-value">{programList && programList.length}</span>
               </div>
             </div>
           </div>
